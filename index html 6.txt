@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publishers Clearing House Money</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Publishers Clearing House Money</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#claim-requirement">Claim Requirement</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#apply-now">Apply Now</a></li>
+                <li><a href="#winners-list">Winners List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to PCH Money</h2>
+        <p>Qualify for up to $300,000 in Personal Grants!</p>
+        <img src="pch-image.jpg" alt="PCH Image">
+    </section>
+
+    <!-- Claim Requirement Section -->
+    <section id="claim-requirement">
+        <h2>Claim Requirements</h2>
+        <p>Discover how to apply for grants and learn about the necessary requirements to qualify.</p>
+        <!-- Add more content here -->
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Learn more about the many diverse programs available through our services. We offer grants for housing, education, business, and much more!</p>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <p>Our programs cover various needs. From grants to purchase a home, repair a car, to business grants – we offer it all!</p>
+    </section>
+
+    <!-- Apply Now Section -->
+    <section id="apply-now">
+        <h2>Apply Now</h2>
+        <form action="/submit-form" method="POST">
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" name="first-name" required>
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" name="last-name" required>
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+            <label for="comment">Comment</label>
+            <textarea id="comment" name="comment"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Winners List Section -->
+    <section id="winners-list">
+        <h2>Winners List</h2>
+        <p>Check out our latest winners!</p>
+        <!-- Add winners content here -->
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Publishers Clearing House</p>
+    </footer>
+
+    <!-- Scripts for Gmail and Facebook integration -->
+    <script src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+        // Initialize Facebook SDK
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : 'your-facebook-app-id',
+                cookie     : true,
+                xfbml      : true,
+                version    : 'v13.0'
+            });
+        };
+
+        // Google sign-in
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log("ID: " + profile.getId());
+            console.log("Full Name: " + profile.getName());
+            console.log("Email: " + profile.getEmail());
+        }
+    </script>
+</body>
+</html>
